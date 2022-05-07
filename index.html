@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fas fa-paper-plane"></i>
+            <div class="input-group">
+                <label for="input-name">Nombre Completo</label>
+                <input type="text" placeholder="Introduce tu nombre" id="input-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="input-phone">Numero Telefonico</label>
+                <input type="tel" placeholder="+01 978 654 32 10" id="input-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="input-email">Email</label>
+                <input type="email" placeholder="ejemplo@dominio.com" name="input-email" id="input-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="input-msg">Introduce un Mensaje</label>
+                <textarea name="input-msg" id="input-msg" rows="5" onkeyup="validateMsg()"></textarea>
+                <span id="msg-error"></span>
+            </div>
+            <button onclick="validateForm()">Enviar</button>
+            <span id="general-error"></span>
+        </form>
+    </div>
+    <script src="./app.js"></script> 
+</body>
+</html>
